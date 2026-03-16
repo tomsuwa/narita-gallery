@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>施工事例 Before/After</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Hiragino Kaku Gothic Pro','Meiryo',sans-serif;background:#f8f8f8;color:#333}
+.wrap{max-width:1100px;margin:0 auto;padding:24px 16px 40px}
+h1{text-align:center;font-size:1.5rem;font-weight:700;margin-bottom:8px;letter-spacing:.05em}
+h1 small{display:block;font-size:.72rem;font-weight:400;color:#999;margin-top:3px;letter-spacing:.12em}
+.tabs{display:flex;flex-wrap:wrap;gap:6px;margin:20px 0 24px}
+.tab-btn{padding:7px 14px;border:2px solid #ccc;background:#fff;border-radius:20px;cursor:pointer;font-size:.82rem;font-weight:600;color:#555;transition:all .2s}
+.tab-btn.active,.tab-btn:hover{background:#2c5f8a;border-color:#2c5f8a;color:#fff}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:24px}
+.pair-card{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.08)}
+.desc{padding:10px 14px;font-size:.78rem;color:#666;line-height:1.5}
+.sc{position:relative;width:100%;aspect-ratio:4/3;overflow:hidden;cursor:col-resize;user-select:none;background:#ddd}
+.sc img{width:100%;height:100%;object-fit:cover;display:block;pointer-events:none}
+.ia{position:absolute;inset:0}
+.ib{position:absolute;top:0;left:0;height:100%;overflow:hidden}
+.dv{position:absolute;top:0;bottom:0;width:2px;background:#fff;left:50%;transform:translateX(-50%);pointer-events:none}
+.hd{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:40px;height:40px;border-radius:50%;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.3);pointer-events:none;z-index:10}
+.hd::before,.hd::after{content:'';width:0;height:0;border-top:7px solid transparent;border-bottom:7px solid transparent;position:absolute}
+.hd::before{border-right:10px solid #2c5f8a;right:56%}
+.hd::after{border-left:10px solid #2c5f8a;left:56%}
+.lbl{position:absolute;top:10px;background:rgba(0,0,0,.55);color:#fff;font-size:.7rem;font-weight:700;padding:3px 8px;border-radius:4px;pointer-events:none}
+.lb{left:10px}.la{right:10px}
+@media(max-width:600px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>施工事例ギャラリー<small>BEFORE / AFTER</small></h1>
+  <div class="tabs"><button class="tab-btn  active" data-tab="0">家具塗装</button><button class="tab-btn" data-tab="1">キッチン塗装</button><button class="tab-btn" data-tab="2">屋根塗装</button><button class="tab-btn" data-tab="3">屋根張替え</button><button class="tab-btn" data-tab="4">床塗装</button><button class="tab-btn" data-tab="5">外壁塗装</button><button class="tab-btn" data-tab="6">内部塗装</button><button class="tab-btn" data-tab="7">その他塗装</button><button class="tab-btn" data-tab="8">新築住宅塗装</button></div>
+  <div class="tp" id="p0" style="display:block"><div class="grid"><div class="pair-card">
+  <div class="sc">
+    <div class="ia"><img data-src="kagu_01_after.jpg" alt="施工後"></div>
+    <div class="ib" style="width:50%"><img data-src="kagu_01_before.jpg" alt="施工前"></div>
+    <div class="dv"></div><div class="hd"></div>
+    <span class="lbl lb">施工前</span><span class="lbl la">施工後</span>
+  </div><p class='desc'>家具塗装</p>
+</div><div class="pair-card">
+  <div class="sc">
+    <div class="ia"><img data-src="kagu_02_after.jpg" alt="施工後"></div>
+    <div class="ib" style="width:50%"><img data-src="kagu_02_before.jpg" alt="施工前"></div>
+    <div class="dv"></div><div class="hd"></div>
+    <span class="lbl lb">施工前</span><span class="lbl la">施工後</span>
+  </div><p class='desc'>棚　塗装前</p>
+</div><div class="pair-card">
+  <div class="sc">
+    <div class="ia"><img data-src="kagu_03_after.jpg" alt="施工後"></div>
+    <div class="ib" style="width:50%"><img data-src="kagu_03_before.jpg" alt="施工前"></div>
+    <div class="dv"></div><div class="hd"></div>
+    <span class="lbl lb">施工前</span><span class="lbl la">施工後</span>
+  </div><p class='desc'>オイルステインで着色後、水性ウレタン(クリア)塗装で仕上げました</p>
+</div></div></div>
+<div class="tp" id="p1" style="display:none"><div class="grid"><div class="pair-card">
+  <div class="sc">
+    <div class="ia"><img data-src="kitchen_01_after.jpg" alt="施工後"></div>
+    <div class="ib" style="width:50%"><img data-src="kitchen_01_before.jpg" alt="施工前"></div>
+    <div class="dv"></div><div class="hd"></div>
+    <span class="lbl lb">施工前</span><span class="lbl la">施工後</span>
+  </div><p class='desc'>キッチンまわり塗装</p>
+</div><div class="pair-card">
+  <div class="sc">
+    <div class="ia"><img data-src="kitchen_02_after.jpg" alt="施工後"></div>
+    <div class="ib" style="width:50%"><img data-src="kitchen_02_before.jpg" alt="施工前"></div>
+    <div class="dv"></div><div class="hd"></div>
+    <span class="lbl lb">施工前</span><span class="lbl la">施工後</span>
+  </div><p class='desc'>施工前</p>
+</div><div class="pair-card">
+  <div class="sc">
+    <div class="ia"><img data-src="kitchen_03_after.jpg" alt="施工後"></div>
+    <div class="ib" style="width:50%"><img data-src="kitchen_03_before.jpg" alt="施工前"></div>
+    <div class="dv"></div><div class="hd"></div>
+    <span class="lbl lb">施工前</span><span class="lbl la">施工後</span>
+  </div><p class='desc'>施工前</p>
+</div><div class="pair-card">
+  <div class="sc">
+    <div class="ia"><img data-src="kitchen_04_after.jpg" alt="施工後"></div>
+    <div class="ib" style="width:50%"><img data-src="kitchen_04_before.jpg" alt="施工前"></div>
+    <div class="dv"></div><div class="hd"></div>
+    <span class="lbl lb">施工前</span><span class="lbl la">施工後</span>
+  </div><p class='desc'>施工前</p>
+</div></div></div>
+<div class="tp" id="p2" style="display:none"><div class="grid"><div class="pair-card">
+  <div class="sc">
+    <div class="ia"><img data-src="yane_01_after.jpg" alt="施工後"></div>
+    <div class="ib" style="width:50%"><img data-src="yane_01_before.jpg" alt="施工前"></div>
+    <div class="dv"></div><div class="hd"></div>
+    <span class="lbl lb">施工前</span><span class="lbl la">施工後</span>
+  </div><p class='desc'>雪が多い秋田県では2液型が好ましいです。</p>
+</div><div class="pair-card">
+  <div class="sc">
+    <div class="ia"><img data-src="yane_02_after.jpg" alt="施工後"></div>
+    <div class="ib" style="width:50%"><img data-src="yane_02_before.jpg" alt="施工前"></div>
+    <div class="dv"></div><div class="hd"></div>
+    <span class="lbl lb">施工前</span><span class="lbl la">施工後</span>
+  </div><p class='desc'>折半屋根　塗装前</p>
+</div><div class="pair-card">
+  <div class="sc">
+    <div class="ia"><img data-src="yane_03_after.jpg" alt="施工後"></div>
+    <div class="ib" style="width:50%"><img data-src="yane_03_before.jpg" alt="施工前"></div>
+    <div class="dv"></div><div class="hd"></div>
+    <span class="lbl lb">施工前</span><span class="lbl la">施工後</span>
+  </div><p class='desc'>折半屋根　施工中</p>
+</div><div class="pair-card">
+  <div class="sc">
+    <div class="ia"><img data-src="yane_04_after.jpg" alt="施工後"></div>
+    <div class="ib" style="width:50%"><img data-src="yane_04_before.jpg" alt="施工前"></div>
+    <div class="dv"></div><div class="hd"></div>
+    <span class="lbl lb">施工前</span><span class="lbl la">施工後</span>
+  </div><p class='desc'>住宅の屋根塗装です</p>
+</div><div class="pair-card">
+  <div class="sc">
+    <div class="ia"><img data-src="yane_05_after.jpg" alt="施工後"></div>
+    <div class="ib" style="width:50%"><img data-src="yane_05_before.jpg" alt="施工前"></div>
+    <div class="dv"></div><div class="hd"></div>
+    <span class="lbl lb">施工前</span><span class="lbl la">施工後</span>
+  </div><p class='desc'>ケレン作業です。</p>
+</div><div class="pair-card">
+  <div class="sc">
+    <div class="ia"><img data-src="yane_06_after.jpg" alt="施工後"></div>
+    <div class="ib" style="width:50%"><img data-src="yane_06_before.jpg" alt="施工前"></div>
+    <div class="dv"></div><div class="hd"></div>
+    <span class="lbl lb">施工前</span><span class="lbl la">施工後</span>
+  </div><p class='desc'>中塗りです。</p>
+</div></div></div>
+<div class="tp" id="p3" style="display:none"><div class="grid"><div class="pair-card">
+  <div class="sc">
+    <div class="ia"><img data-src="yane_harikae_01_after.jpg" alt="施工後"></div>
+    <div class="ib" style="width:50%"><img data-src="yane_harikae_01_before.jpg" alt="施工前"></div>
+    <div class="dv"></div><div class="hd"></div>
+    <span class="lbl lb">施工前</span><span class="lbl la">施工後</span>
+  </div><p class='desc'>住宅の屋根の張替え工事です</p>
+</div><div class="pair-card">
+  <div class="sc">
+    <div class="ia"><img data-src="yane_harikae_02_after.jpg" alt="施工後"></div>
+    <div class="ib" style="width:50%"><img data-src="yane_harikae_02_before.jpg" alt="施工前"></div>
+    <div class="dv"></div><div class="hd"></div>
+    <span class="lbl lb">施工前</span><span class="lbl la">施工後</span>
+  </div><p class='desc'>施工前</p>
+</div><div class="pair-card">
+  <div class="sc">
+    <div class="ia"><img data-src="yane_harikae_03_after.jpg" alt="施工後"></div>
+    <div class="ib" style="width:50%"><img data-src="yane_harikae_03_before.jpg" alt="施工前"></div>
+    <div class="dv"></div><div class="hd"></div>
+    <span class="lbl lb">施工前</span><span class="lbl la">施工後</span>
+  </div><p class='desc'>こちらも住宅の屋根の張替え工事です</p>
+</div><div class="pair-card">
+  <div class="sc">
+    <div class="ia"><img data-src="yane_harikae_04_after.jpg" alt="施工後"></div>
+    <div class="ib" style="width:50%"><img data-src="yane_harikae_04_before.jpg" alt="施工前"></div>
+    <div class="dv"></div><div class="hd"></div>
+    <span class="lbl lb">施工前</span><span class="lbl la">施工後</span>
+  </div><p class='desc'>施工前</p>
+</div></div></div>
+<div class="tp" id="p4" style="display:none"><div class="grid"><div class="pair-card">
+  <div class="sc">
+    <div class="ia"><img data-src="yuka_01_after.jpg" alt="施工後"></div>
+    <div class="ib" style="width:50%"><img data-src="yuka_01_before.jpg" alt="施工前"></div>
+    <div class="dv"></div><div class="hd"></div>
+    <span class="lbl lb">施工前</span><span class="lbl la">施工後</span>
+  </div><p class='desc'>某会社　工場倉庫床の塗装</p>
+</div></div></div>
+<div class="tp" id="p5" style="display:none"><div class="grid"><div class="pair-card">
+  <div class="sc">
+    <div class="ia"><img data-src="gaiheki_01_after.jpg" alt="施工後"></div>
+    <div class="ib" style="width:50%"><img data-src="gaiheki_01_before.jpg" alt="施工前"></div>
+    <div class="dv"></div><div class="hd"></div>
+    <span class="lbl lb">施工前</span><span class="lbl la">施工後</span>
+  </div><p class='desc'>タイル調の特殊な塗装です</p>
+</div><div class="pair-card">
+  <div class="sc">
+    <div class="ia"><img data-src="gaiheki_02_after.jpg" alt="施工後"></div>
+    <div class="ib" style="width:50%"><img data-src="gaiheki_02_before.jpg" alt="施工前"></div>
+    <div class="dv"></div><div class="hd"></div>
+    <span class="lbl lb">施工前</span><span class="lbl la">施工後</span>
+  </div><p class='desc'>アパートの塗装です</p>
+</div><div class="pair-card">
+  <div class="sc">
+    <div class="ia"><img data-src="gaiheki_03_after.jpg" alt="施工後"></div>
+    <div class="ib" style="width:50%"><img data-src="gaiheki_03_before.jpg" alt="施工前"></div>
+    <div class="dv"></div><div class="hd"></div>
+    <span class="lbl lb">施工前</span><span class="lbl la">施工後</span>
+  </div><p class='desc'>アパート　施工前</p>
+</div><div class="pair-card">
+  <div class="sc">
+    <div class="ia"><img data-src="gaiheki_04_after.jpg" alt="施工後"></div>
+    <div class="ib" style="width:50%"><img data-src="gaiheki_04_before.jpg" alt="施工前"></div>
+    <div class="dv"></div><div class="hd"></div>
+    <span class="lbl lb">施工前</span><span class="lbl la">施工後</span>
+  </div><p class='desc'>アパート　施工前</p>
+</div><div class="pair-card">
+  <div class="sc">
+    <div class="ia"><img data-src="gaiheki_05_after.jpg" alt="施工後"></div>
+    <div class="ib" style="width:50%"><img data-src="gaiheki_05_before.jpg" alt="施工前"></div>
+    <div class="dv"></div><div class="hd"></div>
+    <span class="lbl lb">施工前</span><span class="lbl la">施工後</span>
+  </div><p class='desc'>某店舗の塗装です</p>
+</div></div></div>
+<div class="tp" id="p6" style="display:none"><div class="grid"><div class="pair-card">
+  <div class="sc">
+    <div class="ia"><img data-src="naibu_01_after.jpg" alt="施工後"></div>
+    <div class="ib" style="width:50%"><img data-src="naibu_01_before.jpg" alt="施工前"></div>
+    <div class="dv"></div><div class="hd"></div>
+    <span class="lbl lb">施工前</span><span class="lbl la">施工後</span>
+  </div><p class='desc'>内部塗装</p>
+</div><div class="pair-card">
+  <div class="sc">
+    <div class="ia"><img data-src="naibu_02_after.jpg" alt="施工後"></div>
+    <div class="ib" style="width:50%"><img data-src="naibu_02_before.jpg" alt="施工前"></div>
+    <div class="dv"></div><div class="hd"></div>
+    <span class="lbl lb">施工前</span><span class="lbl la">施工後</span>
+  </div><p class='desc'>ビスやジョイント部から先にパテ処理をしていきます</p>
+</div><div class="pair-card">
+  <div class="sc">
+    <div class="ia"><img data-src="naibu_03_after.jpg" alt="施工後"></div>
+    <div class="ib" style="width:50%"><img data-src="naibu_03_before.jpg" alt="施工前"></div>
+    <div class="dv"></div><div class="hd"></div>
+    <span class="lbl lb">施工前</span><span class="lbl la">施工後</span>
+  </div><p class='desc'>天井塗装</p>
+</div></div></div>
+<div class="tp" id="p7" style="display:none"><div class="grid"><div class="pair-card">
+  <div class="sc">
+    <div class="ia"><img data-src="sonota_01_after.jpg" alt="施工後"></div>
+    <div class="ib" style="width:50%"><img data-src="sonota_01_before.jpg" alt="施工前"></div>
+    <div class="dv"></div><div class="hd"></div>
+    <span class="lbl lb">施工前</span><span class="lbl la">施工後</span>
+  </div><p class='desc'>鉄骨塗装</p>
+</div><div class="pair-card">
+  <div class="sc">
+    <div class="ia"><img data-src="sonota_02_after.jpg" alt="施工後"></div>
+    <div class="ib" style="width:50%"><img data-src="sonota_02_before.jpg" alt="施工前"></div>
+    <div class="dv"></div><div class="hd"></div>
+    <span class="lbl lb">施工前</span><span class="lbl la">施工後</span>
+  </div><p class='desc'>高所作業車を使用して塗装していきます</p>
+</div><div class="pair-card">
+  <div class="sc">
+    <div class="ia"><img data-src="sonota_03_after.jpg" alt="施工後"></div>
+    <div class="ib" style="width:50%"><img data-src="sonota_03_before.jpg" alt="施工前"></div>
+    <div class="dv"></div><div class="hd"></div>
+    <span class="lbl lb">施工前</span><span class="lbl la">施工後</span>
+  </div><p class='desc'>新築の公共施設の鉄骨塗装です</p>
+</div></div></div>
+<div class="tp" id="p8" style="display:none"><div class="grid"><div class="pair-card">
+  <div class="sc">
+    <div class="ia"><img data-src="shintiku_01_after.jpg" alt="施工後"></div>
+    <div class="ib" style="width:50%"><img data-src="shintiku_01_before.jpg" alt="施工前"></div>
+    <div class="dv"></div><div class="hd"></div>
+    <span class="lbl lb">施工前</span><span class="lbl la">施工後</span>
+  </div><p class='desc'>新築住宅の内部塗装です</p>
+</div><div class="pair-card">
+  <div class="sc">
+    <div class="ia"><img data-src="shintiku_02_after.jpg" alt="施工後"></div>
+    <div class="ib" style="width:50%"><img data-src="shintiku_02_before.jpg" alt="施工前"></div>
+    <div class="dv"></div><div class="hd"></div>
+    <span class="lbl lb">施工前</span><span class="lbl la">施工後</span>
+  </div><p class='desc'>新築住宅の内部塗装です</p>
+</div><div class="pair-card">
+  <div class="sc">
+    <div class="ia"><img data-src="shintiku_03_after.jpg" alt="施工後"></div>
+    <div class="ib" style="width:50%"><img data-src="shintiku_03_before.jpg" alt="施工前"></div>
+    <div class="dv"></div><div class="hd"></div>
+    <span class="lbl lb">施工前</span><span class="lbl la">施工後</span>
+  </div><p class='desc'>光の当たり方で表情を変えるマットな質感は、塗装仕上げならではの魅力です。</p>
+</div><div class="pair-card">
+  <div class="sc">
+    <div class="ia"><img data-src="shintiku_04_after.jpg" alt="施工後"></div>
+    <div class="ib" style="width:50%"><img data-src="shintiku_04_before.jpg" alt="施工前"></div>
+    <div class="dv"></div><div class="hd"></div>
+    <span class="lbl lb">施工前</span><span class="lbl la">施工後</span>
+  </div><p class='desc'>施工前</p>
+</div><div class="pair-card">
+  <div class="sc">
+    <div class="ia"><img data-src="shintiku_05_after.jpg" alt="施工後"></div>
+    <div class="ib" style="width:50%"><img data-src="shintiku_05_before.jpg" alt="施工前"></div>
+    <div class="dv"></div><div class="hd"></div>
+    <span class="lbl lb">施工前</span><span class="lbl la">施工後</span>
+  </div><p class='desc'>施工前</p>
+</div><div class="pair-card">
+  <div class="sc">
+    <div class="ia"><img data-src="shintiku_06_after.jpg" alt="施工後"></div>
+    <div class="ib" style="width:50%"><img data-src="shintiku_06_before.jpg" alt="施工前"></div>
+    <div class="dv"></div><div class="hd"></div>
+    <span class="lbl lb">施工前</span><span class="lbl la">施工後</span>
+  </div><p class='desc'>施工前</p>
+</div><div class="pair-card">
+  <div class="sc">
+    <div class="ia"><img data-src="shintiku_07_after.jpg" alt="施工後"></div>
+    <div class="ib" style="width:50%"><img data-src="shintiku_07_before.jpg" alt="施工前"></div>
+    <div class="dv"></div><div class="hd"></div>
+    <span class="lbl lb">施工前</span><span class="lbl la">施工後</span>
+  </div><p class='desc'>施工前</p>
+</div><div class="pair-card">
+  <div class="sc">
+    <div class="ia"><img data-src="shintiku_08_after.jpg" alt="施工後"></div>
+    <div class="ib" style="width:50%"><img data-src="shintiku_08_before.jpg" alt="施工前"></div>
+    <div class="dv"></div><div class="hd"></div>
+    <span class="lbl lb">施工前</span><span class="lbl la">施工後</span>
+  </div><p class='desc'>施工前</p>
+</div><div class="pair-card">
+  <div class="sc">
+    <div class="ia"><img data-src="shintiku_09_after.jpg" alt="施工後"></div>
+    <div class="ib" style="width:50%"><img data-src="shintiku_09_before.jpg" alt="施工前"></div>
+    <div class="dv"></div><div class="hd"></div>
+    <span class="lbl lb">施工前</span><span class="lbl la">施工後</span>
+  </div><p class='desc'>階段、手摺の木部はドイツのリボスを使用しています。</p>
+</div><div class="pair-card">
+  <div class="sc">
+    <div class="ia"><img data-src="shintiku_10_after.jpg" alt="施工後"></div>
+    <div class="ib" style="width:50%"><img data-src="shintiku_10_before.jpg" alt="施工前"></div>
+    <div class="dv"></div><div class="hd"></div>
+    <span class="lbl lb">施工前</span><span class="lbl la">施工後</span>
+  </div><p class='desc'>(写真提供：株式会社Curand様)</p>
+</div><div class="pair-card">
+  <div class="sc">
+    <div class="ia"><img data-src="shintiku_11_after.jpg" alt="施工後"></div>
+    <div class="ib" style="width:50%"><img data-src="shintiku_11_before.jpg" alt="施工前"></div>
+    <div class="dv"></div><div class="hd"></div>
+    <span class="lbl lb">施工前</span><span class="lbl la">施工後</span>
+  </div><p class='desc'>こちらは新築店舗の内部塗装です。</p>
+</div><div class="pair-card">
+  <div class="sc">
+    <div class="ia"><img data-src="shintiku_12_after.jpg" alt="施工後"></div>
+    <div class="ib" style="width:50%"><img data-src="shintiku_12_before.jpg" alt="施工前"></div>
+    <div class="dv"></div><div class="hd"></div>
+    <span class="lbl lb">施工前</span><span class="lbl la">施工後</span>
+  </div><p class='desc'>天井と壁は家具が映えるよう白で統一し塗装しました。</p>
+</div><div class="pair-card">
+  <div class="sc">
+    <div class="ia"><img data-src="shintiku_13_after.jpg" alt="施工後"></div>
+    <div class="ib" style="width:50%"><img data-src="shintiku_13_before.jpg" alt="施工前"></div>
+    <div class="dv"></div><div class="hd"></div>
+    <span class="lbl lb">施工前</span><span class="lbl la">施工後</span>
+  </div><p class='desc'>天井と壁は家具が映えるよう白で統一し塗装しました。</p>
+</div><div class="pair-card">
+  <div class="sc">
+    <div class="ia"><img data-src="shintiku_14_after.jpg" alt="施工後"></div>
+    <div class="ib" style="width:50%"><img data-src="shintiku_14_before.jpg" alt="施工前"></div>
+    <div class="dv"></div><div class="hd"></div>
+    <span class="lbl lb">施工前</span><span class="lbl la">施工後</span>
+  </div>
+</div></div></div>
+
+</div>
+<script>
+// ★ここだけ変更 → GitHubユーザー名とリポジトリ名を入れる
+const BASE_URL = 'https://tomsuwa.github.io/narita-gallery/';
+
+document.querySelectorAll('img[data-src]').forEach(img => {
+  img.src = BASE_URL + img.dataset.src;
+});
+
+document.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tp').forEach(p => p.style.display = 'none');
+    btn.classList.add('active');
+    document.getElementById('p' + btn.dataset.tab).style.display = 'block';
+  });
+});
+
+document.querySelectorAll('.sc').forEach(el => {
+  const ib=el.querySelector('.ib'),dv=el.querySelector('.dv'),hd=el.querySelector('.hd');
+  let drag=false;
+  const set=x=>{const r=el.getBoundingClientRect(),p=Math.max(0,Math.min(1,(x-r.left)/r.width))*100+'%';ib.style.width=p;dv.style.left=p;hd.style.left=p;};
+  el.addEventListener('mousedown',e=>{drag=true;set(e.clientX)});
+  el.addEventListener('touchstart',e=>{drag=true;set(e.touches[0].clientX)},{passive:true});
+  window.addEventListener('mousemove',e=>{if(drag)set(e.clientX)});
+  window.addEventListener('touchmove',e=>{if(drag)set(e.touches[0].clientX)},{passive:true});
+  window.addEventListener('mouseup',()=>drag=false);
+  window.addEventListener('touchend',()=>drag=false);
+});
+</script>
+</body>
+</html>
